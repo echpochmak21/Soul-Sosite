@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* изменено с min-height: 100% на min-height: 100vh */
+}
+
+.main-content {
+  flex: 1; /* Этот блок займет все доступное пространство между header и footer */
+}
+
+.main-footer {
+  background: #333;
+  color: #fff;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.main-footer h2 {
+  color: #fff;
+}
+
+.main-footer ul {
+  list-style-type: none;
+}
+
+.main-footer ul li {
+  padding-bottom: 10px;
+}
+
+.main-footer ul li a {
+  color: #fff;
+}
+
+.main-footer ul li a:hover {
+  color: #ccc;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.col {
+  flex: 1;
+  padding: 0 20px;
+}
+
+@media(max-width:768px) {
+  .container {
+      width: 100%;
+  }
+
+  .col {
+      flex: 100%;
+      margin-top: 20px;
+  }
+}

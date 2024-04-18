@@ -1,3 +1,4 @@
+// Header.js
 import React, { useState } from 'react';
 import './header.css';
 import logo from '../img/logo.png';
@@ -66,7 +67,7 @@ const Header = () => {
   return (
     <header className="header-container">
       <div className="header-content">
-      <img src={logo} alt="Логотип" className="logo-image" />
+        <img src={logo} alt="Логотип" className="logo-image" />
         <ul className="header-links">
           <li><button className="login-button" onClick={handleLoginClick}>Войти</button></li>
           <button className="register-button" onClick={handleRegisterClick}>Регистрация</button>

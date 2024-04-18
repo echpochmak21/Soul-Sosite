@@ -1,5 +1,6 @@
+/* header.css */
 body {
-  background-image: url('C:\Users\USER\Desktop\magaz\frontend\anime\src\img\kfd.jpg');
+  background-image: url('C:\Users\ag229\OneDrive\Рабочий стол\magaz\frontend\anime\src\img\kfd.jpg');
   background-color: #333;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,6 +8,11 @@ body {
   color: white;
   margin: 0;
   font-family: Arial, sans-serif;
+}
+
+.header-container {
+  position: relative;
+  z-index: 1; /* Устанавливаем высокий индекс z для header-container, чтобы он оставался поверх других элементов */
 }
 
 .header-content {
@@ -36,7 +42,6 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 1002; /* Устанавливаем более высокий уровень z-index */
 }
 
 .register-button:hover {
@@ -51,7 +56,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
-  z-index: 1001; /* Устанавливаем более высокий уровень z-index */
+  z-index: 1000; /* Устанавливаем самый высокий индекс z для окна регистрации, чтобы оно было поверх всего */
   width: 300px;
 }
 
@@ -126,7 +131,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Устанавливаем высокий уровень z-index */
+  z-index: 999; /* Устанавливаем z-index ниже, чем для .registration-window, чтобы окно было поверх оверлея */
 }
 
 .error-message {
@@ -142,7 +147,6 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 1002; /* Устанавливаем более высокий уровень z-index */
 }
 
 .login-button:hover {

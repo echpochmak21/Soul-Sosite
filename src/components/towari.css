@@ -1,110 +1,110 @@
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.tabs {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.tab {
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-.tab.active {
-  background-color: #da4e0d;
-}
-
-.products-column {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product {
-  width: calc(25% - 20px);
-  margin: 50px;
-  padding: 10px;
-  border: 1px solid #dddddd42;
-  border-radius: 20px;
-  cursor: pointer;
-  position: relative;
-}
-
-.product-name {
-  font-weight: bold;
-}
-
-.product-price {
-  margin-top: 5px;
-  color: green;
-}
-
-.product:hover {
-  transform: scale(1.1); /* Увеличиваем размер при наведении на 10% */
-  transition: transform 0.3s ease; /* Добавляем плавный переход */
-}
-
-.buy-button {
-  margin-top: 50px;
-  padding: 10px 30px;
-  background-color: #7db418;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.buy-button:hover {
-  background-color: #9fa760;
-}
-
-h2 {
-  font-size: 45px; /* Увеличиваем размер текста */
-  margin-bottom: 30px; /* Добавляем отступ снизу */
-}
-
-/* Модальное окно */
-.modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет фона */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-modal {
-  background-color: rgba(255, 255, 255, 0.192);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
-}
-
-.product-modal h3 {
-  margin-top: 0;
-}
-
-.product-modal p {
-  margin-bottom: 10px;
-}
-
-.product-modal button {
-  padding: 10px 20px;
-  background-color: #7db418;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.product-modal button:hover {
-  background-color: #9fa760;
-}
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .tab.active {
+    background-color: #da4e0d;
+  }
+  
+  .products-column {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    width: calc(25% - 20px);
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid #dddddd42;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .product-name {
+    font-weight: bold;
+  }
+  
+  .product-price {
+    margin-top: 5px;
+    color: green;
+  }
+  
+  .product:hover {
+    transform: scale(1.1); /* Увеличиваем размер при наведении на 10% */
+    transition: transform 0.3s ease; /* Добавляем плавный переход */
+  }
+  
+  .buy-button {
+    margin-top: 50px;
+    padding: 10px 30px;
+    background-color: #7db418;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buy-button:hover {
+    background-color: #9fa760;
+  }
+  
+  h2 {
+    font-size: 45px; /* Увеличиваем размер текста */
+    margin-bottom: 30px; /* Добавляем отступ снизу */
+  }
+  
+  /* Модальное окно */
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-modal {
+    background-color: rgba(255, 255, 255, 0.192);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+  }
+  
+  .product-modal h3 {
+    margin-top: 0;
+  }
+  
+  .product-modal p {
+    margin-bottom: 10px;
+  }
+  
+  .product-modal button {
+    padding: 10px 20px;
+    background-color: #7db418;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-modal button:hover {
+    background-color: #9fa760;
+  }

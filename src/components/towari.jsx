@@ -5,6 +5,7 @@ function App() {
   const [selectedTab, setSelectedTab] = useState('Bleach'); // Изначально выбрана вкладка "Bleach"
   const [showModal, setShowModal] = useState(false); // Состояние для отслеживания отображения модального окна
   const [selectedProduct, setSelectedProduct] = useState(null); // Состояние для хранения выбранного продукта
+  const [searchTerm, setSearchTerm] = useState(''); // Состояние для хранения значения поиска
 
   // Функция для обработки выбора вкладки
   const handleTabClick = (tabName) => {
@@ -20,6 +21,11 @@ function App() {
   // Функция для закрытия модального окна
   const closeModal = () => {
     setShowModal(false);
+  };
+
+  // Функция для обновления значения поиска
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
   };
 
   // Массив товаров для каждой вкладки
@@ -118,18 +124,33 @@ function App() {
         ))}
       </div>
 
+      {/* Поиск по названию */}
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Поиск по названию"
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+        <button onClick={() => console.log('Search clicked')}>Поиск</button>
+      </div>
+
       {/* Популярные товары */}
       <h2>Популярные товары</h2>
 
       {/* Список товаров */}
       <div className="products-column">
-        {productsByTab[selectedTab].map((product, index) => (
-          <div className="product" key={index} onClick={() => openModal(product)}>
-            <div className="product-name">{product.name}</div>
-            <div className="product-price">{product.price} ₸</div>
-            <button className="buy-button">В корзину</button>
-          </div>
-        ))}
+        {productsByTab[selectedTab]
+          .filter((product) =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+          .map((product, index) => (
+            <div className="product" key={index} onClick={() => openModal(product)}>
+              <div className="product-name">{product.name}</div>
+              <div className="product-price">{product.price} ₸</div>
+              <button className="buy-button">В корзину</button>
+            </div>
+          ))}
       </div>
 
       {/* Модальное окно */}
